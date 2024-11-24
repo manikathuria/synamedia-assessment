@@ -1,0 +1,10 @@
+/.next
+/node_modules
+/.idea
+yarn-error.log
+*.log
+*.lerna_backup
+*.local.*
+/tmp
+dist/
+.env*

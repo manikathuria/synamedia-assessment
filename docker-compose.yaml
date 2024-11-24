@@ -1,0 +1,17 @@
+services:
+  synamedia-assessment:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+      args:
+        - UID=$UID
+        - GID=$GID
+        - NODE_ENV=$NODE_ENV
+    ports:
+      - "7871:7871"
+    # entrypoint:
+    #   - docker-entrypoint.sh
+    volumes:
+      - .:/app
+    env_file:
+      - .env_api
