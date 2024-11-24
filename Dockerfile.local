@@ -11,8 +11,5 @@ WORKDIR /app
 
 COPY . /app
 
-# RUN chown ${USER}:${GROUP} .
-# USER ${USER}
-
 WORKDIR /app/src
-ENTRYPOINT ["/bin/sh", "-c" , "npm install && npm start"]
+ENTRYPOINT ["/bin/sh", "-c" , "npm install && npm run start:debug"]
